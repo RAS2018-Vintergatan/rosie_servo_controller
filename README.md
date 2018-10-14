@@ -1,36 +1,30 @@
-# rosie-motor-controller
-A servo controller for Rosie's grabbers
+# rosie-servo-controller
+A servo gates controller for Rosie
 
 ## How to run
 Run the following in different terminals:
-**Connecting motors**
+**Starting service**
 ```
-rosrun phidgets motor _serial:=475406 __name:=motorRight _name:=motorRight
-```
-```
-rosrun phidgets motor _serial:=469515 __name:=motorLeft _name:=motorLeft
+rosrun rosie_servo_controller rosie_servo_controller
 ```
 
-**Running controller**
+**Running node**
 ```
-rosparam load controller_params.yaml
-```
-```
-rosrun rosie_motor_controller rosie_motor_controller
+rosrun rosie_servo_controller rosie_servo_controller
 ```
 
-**Sending signal to motor controller**
+**Sending gate angle to servo controller**
 ```
-rostopic pub /motor_controller/twist geometry_msgs/Twist "linear:
-  x: 0.5
-  y: 0.0
-  z: 0.0
-angular:
-  x: 0.0
-  y: 0.0
-  z: 0.0"
+rostopic pub /MoveGates rosie_servo_controller/GateAnes "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+rightgate: 0
+leftgate: 0"
 ```
-where _linear: x_ is speed forward in m/s and _angualr: x_ is angualar speed in radians/s
+where rightgate and leftgate are gate angles in degrees (0-180)
 
 **KTH RAS Servo repo**
 
