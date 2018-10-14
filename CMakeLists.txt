@@ -5,7 +5,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp std_msgs phidgets geometry_msgs m
 
 add_message_files(
   FILES
-  SetServoAngles.msg
+  GateAngles.msg
 )
 
 generate_messages(

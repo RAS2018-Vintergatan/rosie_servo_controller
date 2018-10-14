@@ -1,4 +1,4 @@
 Header header
 
-int8 rightgate
-int8 leftgate
+int64 rightgate
+int64 leftgate
