@@ -15,7 +15,7 @@ rosrun rosie_servo_controller rosie_servo_controller
 
 **Sending gate angle to servo controller**
 ```
-rostopic pub /MoveGates rosie_servo_controller/GateAnes "header:
+rostopic pub /MoveGates rosie_servo_controller/GateAngles "header:
   seq: 0
   stamp:
     secs: 0
