@@ -1,0 +1,8 @@
+<launch>
+	<!-- run the servo (python) node -->
+	<node pkg="arduino_servo_control" type="servo_control" name="arduino_servo_control"/>
+
+	<!-- run the servo controller node -->
+	<node pkg="rosie_servo_controller" type="rosie_servo_controller" name="rosie_servo_controller"/>
+	
+</launch>
