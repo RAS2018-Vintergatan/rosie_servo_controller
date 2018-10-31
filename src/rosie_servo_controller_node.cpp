@@ -1,6 +1,6 @@
 #include "ros/ros.h"
 #include "arduino_servo_control/SetServoAngles.h"
-#include "rosie_servo_controller/GateAngles.h"
+#include <rosie_servo_controller/GateAngles.h>
 #include <cstdlib>
 
 int saveright = -1;
