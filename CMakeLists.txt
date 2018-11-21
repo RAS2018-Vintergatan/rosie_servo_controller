@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(rosie_servo_controller)
 
-find_package(catkin REQUIRED COMPONENTS
+find_package(catkin REQUIRED
   roscpp
   std_msgs
   phidgets
@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   control_gates.msg
+  gate_angles.msg
 )
 add_service_files(
   FILES
@@ -36,9 +37,6 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-#add_executable(rosie_servo_controller src/rosie_servo_controller_node.cpp)
-#add_dependencies(rosie_servo_controller std_msgs phidgets geometry_msgs ${catkin_EXPORTED_TARGETS})
-#target_link_libraries(rosie_servo_controller ${catkin_LIBRARIES})
-add_executable(rosie_servo_controller_new src/rosie_servo_controller_node_new.cpp)
-add_dependencies(rosie_servo_controller_new ${catkin_EXPORTED_TARGETS})
-target_link_libraries(rosie_servo_controller_new ${catkin_LIBRARIES})
+add_executable(rosie_servo_controller src/rosie_servo_controller_node.cpp)
+add_dependencies(rosie_servo_controller ${catkin_EXPORTED_TARGETS})
+target_link_libraries(rosie_servo_controller ${catkin_LIBRARIES})
