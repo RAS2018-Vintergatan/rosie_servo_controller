@@ -1,0 +1,6 @@
+int64 leftgate_open
+int64 leftgate_close
+int64 rightgate_open
+int64 rightgate_close
+---
+bool res

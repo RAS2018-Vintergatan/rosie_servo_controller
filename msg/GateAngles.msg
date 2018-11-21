@@ -1,4 +1,4 @@
-Header header
-
-int64 rightgate
-int64 leftgate
+int64 rightgate_open
+int64 rightgate_close
+int64 leftgate_open
+int64 leftgate_close
