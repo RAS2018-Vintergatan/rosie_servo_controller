@@ -10,6 +10,7 @@
 
   <maintainer email="anshg@kth.se">Ansh G.</maintainer>
 
+  <buildtool_depend>catkin</buildtool_depend>
 
 
   <build_depend>roscpp</build_depend>
@@ -25,5 +26,4 @@
   <run_depend>geometry_msgs</run_depend>
   <run_depend>roslib</run_depend>
 
-  <buildtool_depend>catkin</buildtool_depend>
 </package>
