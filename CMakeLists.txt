@@ -39,4 +39,4 @@ include_directories(
 
 add_executable(rosie_servo_controller src/rosie_servo_controller_node.cpp)
 add_dependencies(rosie_servo_controller ${catkin_EXPORTED_TARGETS})
-target_link_libraries(rosie_servo_controller ${catkin_LIBRARIES})
+target_link_libraries(rosie_servo_controller ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_LIBRARIES})
